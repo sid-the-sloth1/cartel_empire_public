@@ -3,7 +3,7 @@
 // @namespace    ce.bank.input.helper
 // @version      0.1
 // @description  Allows k and m shortcuts on Bank page
-// @author       You
+// @author       Hardy [1345]
 // @match        https://cartelempire.online/Bank
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=cartelempire.online
 // @grant        GM_addStyle
