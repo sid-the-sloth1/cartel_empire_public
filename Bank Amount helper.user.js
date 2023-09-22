@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CE: Bank Amount Input Helper
 // @namespace    ce.bank.input.helper
-// @version      0.1
+// @version      0.2
 // @description  Allows k and m shortcuts on Bank page
 // @author       Hardy [1345]
 // @match        https://cartelempire.online/Bank
@@ -15,6 +15,12 @@
     let waitObj = {};
     let taxOnBank = 0;
     let balance = 0;
+    let cash = 0;
+    waitForElement(`span.currentCashDesktop`, 700, 50, "dsfkvbkj").then((element) => {
+        cash = parseInt(element.innerText.trim().replace(/[,.\s]/g, ""));
+    }).catch(error => {
+        console.log(error);
+    });
     waitForElement(`#cashInBank`, 700, 50, "vdghns").then((element) => {
         balance = parseInt(element.innerText.trim().replace(/[,.\s]/g, ""));
         const parent = element.parentNode;
@@ -72,7 +78,13 @@
             const val = inp.split("");
             const lastLetter = val[val.length -1];
             let digits;
-            if (lastLetter == "k" || lastLetter == "K") {
+            if (inp == "all" || inp == "ALL") {
+                if (element.id == "withdrawInput") {
+                    digits = balance;
+                } else {
+                    digits = cash;
+                }
+            } else if (lastLetter == "k" || lastLetter == "K") {
                 val.splice(val.length-1, 1);
                 digits = parseFloat(val.join(""))*1000.0;
             } else if (lastLetter == "m" || lastLetter == "M") {
