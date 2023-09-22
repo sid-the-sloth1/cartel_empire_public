@@ -1,3 +1,16 @@
+## Table of Contents
+
+1. [Contact me](#contact-me)
+2. [How it works](#how-it-works)
+3. [Glances](#glances)
+4. [Pricing: 12 Coke](#pricing-12-coke)
+5. [Instructions](#instructions)
+6. [End Words](#end-words)
+
+
+
+## Contact me 
+[Link to my CE Profile](https://cartelempire.online/user/1345)
 ## How it works?
 1. Whenever user opens the Inventory Page, the script caches the items available in the inventory.
 2. Then whenever user visits the Market or Jobs Page, it shows the information regarding the raw material the user needs to sustain the production.
