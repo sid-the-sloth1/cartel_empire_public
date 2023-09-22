@@ -43,3 +43,8 @@
  - Here set the number of productions you own of each type and click on Save.
  - Once this is done sit back and enjoy. The script will auto-update its data you open Inventory page or get productions item via Market or Jobs (even in another tab). **But the script is only as accurate as often you visit the Inventory.**
 
+
+## End Words
+My personal favourite thing about the script is, any update in script's data reflects on other opened tabs in which script is running. For example: You have jobs page opened and the script is showing you info. Now if you open another tab and in this new tab you go to Market and buy a Fert bag, it will be automatically reflected in info being shown on Jobs page without needing a refresh.
+
+Thing I dislike is, since api is not available, I have to rely on user manually opening the relevant page so script can cache data. This script is only as accurate as often as you visit inventory.
