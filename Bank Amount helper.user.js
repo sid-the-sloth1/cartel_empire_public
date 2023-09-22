@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CE: Bank Amount Input Helper
 // @namespace    ce.bank.input.helper
-// @version      0.2
+// @version      0.2.1
 // @description  Allows k and m shortcuts on Bank page
 // @author       Hardy [1345]
 // @match        https://cartelempire.online/Bank
@@ -78,7 +78,7 @@
             const val = inp.split("");
             const lastLetter = val[val.length -1];
             let digits;
-            if (inp == "all" || inp == "ALL") {
+            if (inp.toUpperCase() === "ALL") {
                 if (element.id == "withdrawInput") {
                     digits = balance;
                 } else {
