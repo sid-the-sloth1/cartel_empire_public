@@ -14,7 +14,7 @@ If you wish to purchase it: [Link to my CE Profile](https://cartelempire.online/
 
 ## How it works?
 Whenever user opens the Market Page, the script adds a box which has 2 input boxes, one for setting the price of items and the other for setting the price of points.
-User can use these boxes to set the sale price using **k, m and b** shortcut. (I have a free script that provides similar feature for [Bank Page](https://cartelempire.online/Forum/1/254))
+User can use these boxes to set the sale price using **k, m and b** shortcut. (I have a free script that provides similar feature for [Bank Page](https://cartelempire.online/Forum/9/254))
 
 
 ## Glances
