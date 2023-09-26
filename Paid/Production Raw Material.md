@@ -10,7 +10,7 @@
 
 
 ## Contact me 
-[Link to my CE Profile](https://cartelempire.online/user/1345)
+If you wish to purchase it: [Link to my CE Profile](https://cartelempire.online/user/1345)
 ## How it works?
 1. Whenever user opens the Inventory Page, the script caches the items available in the inventory.
 2. Then whenever user visits the Market or Jobs Page, it shows the information regarding the raw material the user needs to sustain the production.
