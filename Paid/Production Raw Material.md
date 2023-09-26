@@ -14,7 +14,7 @@ If you wish to purchase it: [Link to my CE Profile](https://cartelempire.online/
 ## How it works?
 1. Whenever user opens the Inventory Page, the script caches the items available in the inventory.
 2. Then whenever user visits the Market or Jobs Page, it shows the information regarding the raw material the user needs to sustain the production.
-3. Whenever user obtains production item either from Market or by successfully completing a job, the script auto-update its data.
+3. Whenever user obtains production item either from Market or by successfully completing a job(only if user himself initiates the job and views the success message), the script auto-update its data.
 4. The user needs to visit Inventory tab as often as he can to ensure 100% accuracy. (Even if you open it in another tab, the script will auto-update its data on other tabs too)
 
 
