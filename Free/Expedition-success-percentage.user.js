@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CE: Expeditions Helper
 // @namespace    hardy.expeditionHelper
-// @version      2024-07-02
+// @version      2024-07-03
 // @description  Shows success percentage of all teams, without having to select them to see success chance
 // @author       Hardy [1345]
 // @match        https://cartelempire.online/Expedition
@@ -26,7 +26,7 @@
                     clearInterval(intervalId);
                     reject(`Selector Listener Expired: ${selector}, Reason: Dead coz u didnt luv me enough and got another SeLecTor!!!!`);
                 }
-                const element = document.querySelector(selector);
+                const element = document.querySelectorAll(selector);
                 if (element) {
                     clearInterval(intervalId);
                     resolve(element);
@@ -56,22 +56,28 @@
             }
         }
     }
-    waitForElement(`select.expeditionTeamSelector`, 700, 15, "bsvdhdsl").then((element) => {
-        const options = element.options;
-        const length = options.length;
-        if (length > 1) {
-            for (let index = 1; index < length; index++) {
-                const team = options[index];
-                const name = team.text;
-                const obj = {};
-                obj.name = name;
-                obj.speed = parseInt(team.getAttribute("speed"));
-                obj.morale = parseInt(team.getAttribute("morale"));
-                obj.combat = parseInt(team.getAttribute("combat"));
-                obj.caution = parseInt(team.getAttribute("caution"));
-                stats.push(obj);
+    waitForElement(`select.expeditionTeamSelector`, 700, 15, "bsvdhdsl").then((elements) => {
+        let hasLooped = 0;
+        for (const element of elements) {
+            if (hasLooped === 0 && element.value == 0) {
+                hasLooped = 1;
+                const options = element.options;
+                const length = options.length;
+                if (length > 1) {
+                    for (let index = 1; index < length; index++) {
+                        const team = options[index];
+                        const name = team.text;
+                        const obj = {};
+                        obj.name = name;
+                        obj.speed = parseInt(team.getAttribute("speed"));
+                        obj.morale = parseInt(team.getAttribute("morale"));
+                        obj.combat = parseInt(team.getAttribute("combat"));
+                        obj.caution = parseInt(team.getAttribute("caution"));
+                        stats.push(obj);
+                    }
+                    update();
+                }
             }
-            update();
         }
     }).catch(error => {
         console.log(error);
