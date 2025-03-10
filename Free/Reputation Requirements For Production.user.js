@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CE: Reputation Requirements for Production
 // @namespace    hardy.ce.prod.rep
-// @version      0.2
+// @version      0.3
 // @description  Tells you how much reputation you need to unlock all production factories
 // @author       Hardy [1345]
 // @match        https://cartelempire.online/Production
@@ -11,9 +11,10 @@
 // ==/UserScript==
 (function() {
     'use strict';
+    let hasBusinessCourse = false; // set to true; or false; No quotes or commas. Case sensitive. Do not touch anything else
+    
     let currentRep = 0;
-    let hasBusinessCourse = false; // set to true; or false; No quotes or commas. Case sensitive.
-
+    
     const metadata = {
         "doctor": {
           "rep_req": {
