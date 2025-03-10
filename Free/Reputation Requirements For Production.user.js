@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CE: Reputation Requirements for Production
 // @namespace    hardy.ce.prod.rep
-// @version      0.1
+// @version      0.2
 // @description  Tells you how much reputation you need to unlock all production factories
 // @author       Hardy [1345]
 // @match        https://cartelempire.online/Production
@@ -334,7 +334,7 @@
                 const prodContainer = document.querySelector(".productionsContainer");
                 prodContainer.parentNode.insertBefore(div, prodContainer);
             } else {
-                console.log("Unable to find the node containing info regarding current reputation. Contact Hardy[1345]");
+                console.log("Unable to find the node containing info regarding current reputation. Contact Hardy[1345]. Link to repo: https://github.com/sid-the-sloth1/cartel_empire_public/blob/main/Free/Reputation%20Requirements%20For%20Production.user.js");
             }
         });
       }
