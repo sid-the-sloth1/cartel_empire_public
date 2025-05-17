@@ -25,7 +25,7 @@
 Quit the game so do not need to keep it private anymore. My own version of Megascript. Needs https://github.com/sid-the-sloth1/libraries/blob/main/libs/network_listener/network_listener.user.js to work.
 
 The notifiations won't work because it needs a local backend server to handle stuff.
-    */======================================
+   ====================================== */
     'use strict';
     const storageMetadata = {
         "alarms": {
